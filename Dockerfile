@@ -11,7 +11,7 @@ LABEL com.github.actions.icon="file-text"
 LABEL com.github.actions.color="blue"
 
 # Install packages
-RUN apk add --no-cache bash git jq
+RUN apk add --no-cache bash git jq gcc libc-dev libffi-dev python3-dev
 RUN apk add --no-cache python3 && python3 -m ensurepip && pip3 --no-cache-dir install --upgrade pip
 RUN pip3 install requests PyGithub pathlib
 
